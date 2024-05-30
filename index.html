@@ -1,84 +1,34 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Brawl Stars Game</title>
-  <style>
-    /* Global styles */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-    }
-
-    /* Game container styles */
-    #game-container {
-      width: 800px;
-      height: 600px;
-      margin: 40px auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Game board styles */
-    #game-board {
-      width: 100%;
-      height: 100%;
-      display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(8, 1fr);
-      gap: 10px;
-    }
-
-    /* Cell styles */
-   .cell {
-      width: 100%;
-      height: 100%;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    /* Player styles */
-   .player {
-      width: 50px;
-      height: 50px;
-      background-color: #007bff;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    /* Score styles */
-    #score {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 24px;
-      font-weight: bold;
-      color: #333;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brawl Stars Online</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="game-container">
-    <div id="game-board">
-      <!-- Game board cells will be rendered here -->
+    <!-- Game container -->
+    <div id="game-container">
+        <!-- Board -->
+        <div id="board">
+            <!-- Cells will be rendered here -->
+        </div>
+        <!-- Player and opponent info -->
+        <div id="player-info">
+            <p id="player-name">Player 1</p>
+            <p id="player-score">Score: 0</p>
+        </div>
+        <div id="opponent-info">
+            <p id="opponent-name">Opponent</p>
+            <p id="opponent-score">Score: 0</p>
+        </div>
+        <!-- Controls -->
+        <button id="attack-button">Attack</button>
+        <button id="defend-button">Defend</button>
+        <!-- Messages -->
+        <p id="message"></p>
     </div>
-    <div id="score">Score: 0</div>
-  </div>
-  <script src="game.js"></script>
-  <script src="render.js"></script>
-  <script src="controls.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
